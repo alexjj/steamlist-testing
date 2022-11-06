@@ -1,4 +1,7 @@
 import streamlit as st
+import numpy as np
+import pandas as pd
+
 text = st.text_area('Type or paste some  text')
 if text:
   words = text.split()
@@ -62,7 +65,7 @@ st.success('Success')
 st.exception(RuntimeError('This is a fake error.'))
 # st.form('')
 # st.form_submit_button('')
-import numpy as np
+
 df=pd.DataFrame(np.random.randn(20, 3), columns=['a', 'b', 'c'])
 st.line_chart(df)
 st.area_chart(df)
